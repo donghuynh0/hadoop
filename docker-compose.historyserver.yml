@@ -1,7 +1,6 @@
-version: "3"
 services:
   historyserver:
-    image: donghuynh0/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+    image: donghuynh0/hadoop-historyserver:hadoop3.2.1-java8
     platform: linux/amd64
     container_name: historyserver
     restart: always

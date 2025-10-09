@@ -1,7 +1,6 @@
-version: "3"
 services:
   namenode:
-    image: donghuynh0/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    image: donghuynh0/hadoop-namenode:hadoop3.2.1-java8
     platform: linux/amd64
     container_name: namenode
     restart: always
