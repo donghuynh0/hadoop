@@ -1,0 +1,15 @@
+version: "3"
+services:
+  datanode:
+    image: donghuynh0/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    platform: linux/amd64
+    container_name: datanode
+    restart: always
+    volumes:
+      - hadoop_datanode:/hadoop/dfs/data
+    environment:
+      SERVICE_PRECONDITION: "192.168.80.141:9870"
+    env_file:
+      - ./hadoop.env
+volumes:
+  hadoop_datanode:
