@@ -8,8 +8,9 @@ services:
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
     environment:
-      SERVICE_PRECONDITION: "192.168.80.141:9870"
+      SERVICE_PRECONDITION: "namenode:9870"
     env_file:
       - ./hadoop.env
+
 volumes:
   hadoop_datanode:
