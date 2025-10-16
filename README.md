@@ -90,4 +90,4 @@ docker ps --format "table {{.Names}} {{.Status}} {{.Ports}}"
 
 ## Configuration
 
-Review `hadoop.env` to adjust ports or  environment variables
+Review `hadoop.env` and `compose` file to adjust `namenode` by actual namenode ip.
