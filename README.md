@@ -1,5 +1,13 @@
 # Hadoop on Docker
 
+## Services
+
+- NameNode: HDFS metadata (master)
+- DataNode: HDFS data blocks (worker)
+- ResourceManager: Cluster resource scheduler (master)
+- NodeManager: Node-level resource manager (worker)
+- HistoryServer: MapReduce job history UI
+
 ## Prerequisites
 
 - Docker 
@@ -12,13 +20,9 @@
 
 Note: You do not need Java on the host.
 
-## Services
+## Configuration
 
-- NameNode: HDFS metadata (master)
-- DataNode: HDFS data blocks (worker)
-- ResourceManager: Cluster resource scheduler (master)
-- NodeManager: Node-level resource manager (worker)
-- HistoryServer: MapReduce job history UI
+Review `hadoop.env` and `compose` file to adjust `namenode` by actual namenode ip.
 
 ## Start
 
@@ -87,7 +91,3 @@ docker ps --format "table {{.Names}} {{.Status}} {{.Ports}}"
   ```sh
   docker compose down
   ```
-
-## Configuration
-
-Review `hadoop.env` and `compose` file to adjust `namenode` by actual namenode ip.
