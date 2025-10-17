@@ -4,6 +4,7 @@ services:
     platform: linux/amd64
     container_name: datanode
     restart: always
+    network_mode: host
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
     environment:
