@@ -4,9 +4,7 @@ services:
     platform: linux/amd64
     container_name: namenode
     restart: always
-    ports:
-      - 9870:9870
-      - 9000:9000
+    network_mode: host   
     volumes:
       - hadoop_namenode:/hadoop/dfs/name
     environment:
