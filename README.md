@@ -26,18 +26,6 @@ Review `hadoop.env` and `compose` file to adjust `namenode` by actual namenode i
 
 ## Start
 
-create network for hadoop and spark
-```bash
-docker network create hadoop-spark-network
-
-# for namenode
-docker network connect hadoop-spark-network namenode
-
-# for datanode
-docker network connect hadoop-spark-network datanode
-
-```
-
 Start masters first, then workers, then HistoryServer:
 
 ```sh
